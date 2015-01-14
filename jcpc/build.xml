@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<project name="jcpc" default="deploy" basedir=".">
+
+	<echoproperties prefix="ant"/> 
+
+	<property name="name" value="jcpc" />
+	<property name="src" location="src" />
+	<property name="build" location="build" />
+	<property name="classes" location="${build}" />
+	<property name="deploy" location="../CNC/deploy" />
+	<property name="lib" location="libs" />
+
+	<path id="project.class.path">
+	    <fileset dir="${classes}" >
+	    	<include name="**/*.*" />
+	    </fileset>
+	    <fileset dir="${lib}" >
+          <include name="**/*.jar" />
+          <exclude name="*qnx*/*.jar" />
+	    </fileset>
+	</path>
+
+	<target name="clean">
+		<delete dir="${build}" />
+		<delete file="${deploy}/${name}.jar" />
+	</target>
+
+	<target name="prepare" depends="clean">
+    	<mkdir dir="${build}" />
+	</target>
+
+	<target name="compile" depends="prepare">
+
+		<!--
+		replace all occurrences of the string @DEBUG@ with the string true in all files in the directory ${src}
+		<replace dir="${src}" token="@DEBUG@" value="true"/> 
+		-->
+
+		<!--
+		<javac srcdir="${src}" destdir="${classes}" encoding="UTF-8" target="1.3" debug="false" deprecation="false" optimize="true" >
+		-->
+		<javac srcdir="${src}" destdir="${classes}" encoding="UTF-8" source="1.3" target="1.3" debug="true" >
+			<classpath refid="project.class.path"/>
+		</javac>
+
+		<copy todir="${classes}" overwrite="true">
+			<fileset dir="${src}">
+		    	<include name="*.properties"/>
+		    	<include name="*.xml"/>
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="deploy" depends="compile" >
+		<mkdir dir="${build}" />
+		<jar destfile="${name}.jar" basedir="${classes}" > <!--manifest="MANIFEST.MF"-->
+			<manifest>
+    			<attribute name="Created-By" value="Autogenmash team"/>
+	    		<attribute name="Bundle-Name" value="${name}"/>
+	    		<attribute name="Bundle-SymbolicName" value="kernel"/>
+	    		<attribute name="Bundle-RequiredExecutionEnvironment" value="J2SE-1.3"/>
+    		</manifest>
+    	</jar>
+    	
+    	<!--  sign jar files
+		<signjar jar="${deploy}/${name}.jar" alias="kernel" storepass="[eq" /> 
+		use jarsigner tool (See http://java.sun.com/docs/books/tutorial/jar/sign/signing.html for more details.)
+		-->
+    
+    <move file = "${name}.jar" toDir="${build}"/> 
+    <copy file = "${build}/${name}.jar" toDir="d:/CNC"/> 
+    <copy file = "${build}/${name}.jar" toDir="../CNC/deploy"/> 
+	</target>
+
+	<!--
+  <target name="deploy_remote" depends="deploy" >
+  <ftp server="192.168.233.51" userid="root" password="[eq" 
+    verbose="yes" action="put" ignoreNoncriticalErrors="yes" 
+    remotedir="/CNC/gasconsole" chmod="555">
+    <fileset dir="${deploy}">
+        <include name="*.jar"/>
+    </fileset>
+  </ftp>
+  </target>
+  -->
+
+	<target name="all" >
+		<antcall target="deploy" />
+	</target>
+
+</project>
