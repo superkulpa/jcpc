@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macros>
+  <parameters>
+    <parameter name="A" value="100" />
+    <parameter name="B" value="100" />
+    <parameter name="Деталь:Выход" value="Y" />
+    <parameter name="Деталь:Длина отхода" value="100" />
+    <parameter name="Деталь:Длина подхода" value="100" />
+    <parameter name="Деталь:Направление" value="прямое" />
+    <parameter name="Деталь:Отход" value="касательная" />
+    <parameter name="Деталь:Переход" value="200" />
+    <parameter name="Деталь:Подход" value="касательная" />
+    <parameter name="Деталь:Тчк.пробивки" value="1" />
+    <parameter name="Деталь:Угол отхода" value="90" />
+    <parameter name="Деталь:Угол подхода" value="90" />
+    <parameter name="Деталь:Эквидистанта" value="0" />
+    <parameter name="Отверстия:Длина отхода" value="50" />
+    <parameter name="Отверстия:Длина подхода" value="100" />
+    <parameter name="Отверстия:Направление" value="прямое" />
+    <parameter name="Отверстия:Отход" value="нет" />
+    <parameter name="Отверстия:Подход" value="нет" />
+    <parameter name="Отверстия:Угол отхода" value="45" />
+    <parameter name="Отверстия:Угол подхода" value="150" />
+    <parameter name="Отверстия:Эквидистанта" value="0" />
+  </parameters>
+</macros>
+

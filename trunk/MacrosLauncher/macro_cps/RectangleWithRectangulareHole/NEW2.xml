@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macros>
+  <parameters>
+    <parameter name="A0" value="1500" />
+    <parameter name="A1" value="300" />
+    <parameter name="A2" value="500" />
+    <parameter name="B0" value="1500" />
+    <parameter name="B1" value="500" />
+    <parameter name="B2" value="700" />
+    <parameter name="Деталь:Выход" value="Нет" />
+    <parameter name="Деталь:Длина отхода" value="100" />
+    <parameter name="Деталь:Длина подхода" value="100" />
+    <parameter name="Деталь:Направление" value="прямое" />
+    <parameter name="Деталь:Отход" value="нет" />
+    <parameter name="Деталь:Переход" value="300" />
+    <parameter name="Деталь:Подход" value="нет" />
+    <parameter name="Деталь:Тип" value="врезка" />
+    <parameter name="Деталь:Тчк.пробивки" value="1" />
+    <parameter name="Деталь:Угол отхода" value="90" />
+    <parameter name="Деталь:Угол подхода" value="90" />
+    <parameter name="Деталь:Эквидистанта" value="0" />
+    <parameter name="Отверстия:Длина отхода" value="50" />
+    <parameter name="Отверстия:Длина подхода" value="100" />
+    <parameter name="Отверстия:Направление" value="прямое" />
+    <parameter name="Отверстия:Отход" value="нет" />
+    <parameter name="Отверстия:Подход" value="нет" />
+    <parameter name="Отверстия:Тип" value="врезка" />
+    <parameter name="Отверстия:Угол отхода" value="45" />
+    <parameter name="Отверстия:Угол подхода" value="150" />
+    <parameter name="Отверстия:Эквидистанта" value="0" />
+  </parameters>
+</macros>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="/Macros"/>
+	<classpathentry kind="lib" path="/JavaKernel/libs/swt/win/3.2/swt.jar" sourcepath="/JavaKernel/libs/swt/win/3.2/src.zip"/>
+	<classpathentry kind="src" path="/JavaKernel"/>
+	<classpathentry kind="output" path="build"/>
+</classpath>

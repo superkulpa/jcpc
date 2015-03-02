@@ -1,0 +1,70 @@
+<project name="MacrosLauncher" default="compile" basedir=".">
+  
+  <target name="init">
+    <property name="src" value="src" />
+    <property name="build" value="build" />
+    <property name="classes" value="build" />
+  	<property name="deploy.src" value="../CNC/deploy" />
+  	<property name="macros" value="../Macros" />
+  	<property name="kernel" value="../JavaKernel/build" />
+  	
+  	<path id = "class.path">
+	    <pathelement path="${classes}" />
+	    <pathelement path="${deploy.src}/JavaKernel.jar" />
+  		<pathelement path="${macros}/build" />
+	  </path>
+  	
+  </target>
+  
+	
+  <target name="clean" depends="init">
+    <deltree dir="${classes}" />
+  </target>
+	
+  <target name="prepare" depends="clean">
+    <mkdir dir="${classes}" />
+  </target>		
+  
+  <target name="compile" depends="prepare">
+    <javac srcdir="${src}" destdir="${classes}" encoding="UTF-8" source="1.3" target="1.1" debug="true">
+      <classpath refid="class.path"/>
+  	</javac>
+  </target>
+	
+	<target name="deploy" depends="compile">
+	  <jar destfile = "./BaseMacros.jar" manifest="${macros}/manifest/common/MANIFEST.MF">
+	  	<fileset dir="${macros}/build">
+        <include name="**/common/*.class"/>
+	  		<include name="**/common/images/*.gif"/>
+      </fileset>
+	  </jar>
+		<jar destfile = "./AdditionalMacros.jar" manifest="${macros}/manifest/additional/MANIFEST.MF">
+      <fileset dir="${macros}/build">
+        <include name="**/additional/*.class"/>
+      	<include name="**/additional/images/*.gif"/>
+      </fileset>
+    </jar>
+		<jar destfile = "./BaseClasses.jar">
+      <fileset dir="${kernel}">
+        <include name="**/ru/**/*.class"/>
+      </fileset>
+			<fileset dir="${build}">
+        <include name="**/*.class"/>
+      </fileset>
+			<fileset dir="${macros}/build">
+        <include name="**/cometmacros/**/*.class"/>
+				<include name="**/cometmacros/**/*.gif"/>
+				<exclude name="**/additional/**/*.*"/>
+				<exclude name="**/common/**/*.*"/>
+      </fileset>
+    </jar>
+		
+		<copy file = "./BaseMacros.jar" toDir="${deploy.src}"/>
+		<copy file = "./AdditionalMacros.jar" toDir="${deploy.src}"/>
+		<copy file = "./BaseClasses.jar" toDir="${deploy.src}"/>
+	</target>
+	
+</project>
+
+
+
