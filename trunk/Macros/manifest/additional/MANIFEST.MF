@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Implementation-Version: 0.0.1
+Created-By: Autogenmash
+
+Name: ru/autogenmash/macros/cometmacros/additional/JEar.class
+Image: ru/autogenmash/macros/cometmacros/additional/images/ear.gif
+Description: Проушина
+
+Name: ru/autogenmash/macros/cometmacros/additional/JNHoledRectangle.class
+Image: ru/autogenmash/macros/cometmacros/additional/images/nholedrectangle.gif
+Description: Дырявыый прямоугольник
+
+Name: ru/autogenmash/macros/cometmacros/additional/JTrapezoidMultihead.class
+Image: ru/autogenmash/macros/cometmacros/additional/images/trapezoid.gif
+Description: Равнобедренная трапеция

@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Implementation-Version: 0.0.1
+Created-By: Autogenmash
+
+Name: ru/autogenmash/macros/cometmacros/common/JRectangle.class
+Image: ru/autogenmash/macros/cometmacros/common/images/rectangle.gif
+Description: �������������
+
+Name: ru/autogenmash/macros/cometmacros/common/SlantRectangle.class
+Image: ru/autogenmash/macros/cometmacros/common/images/slantRectangle.gif
+Description: �����
+
+Name: ru/autogenmash/macros/cometmacros/common/Trapezoid.class
+Image: ru/autogenmash/macros/cometmacros/common/images/trapezoid.gif
+Description: ��������
+
+Name: ru/autogenmash/macros/cometmacros/common/RectangleWithRectangulareHole.class
+Image: ru/autogenmash/macros/cometmacros/common/images/rectangleWithRectangulareHole.gif
+Description: ������������� � ���.
+
+Name: ru/autogenmash/macros/cometmacros/common/JCircle.class
+Image: ru/autogenmash/macros/cometmacros/common/images/circle.gif
+Description: Circle
+
+Name: ru/autogenmash/macros/cometmacros/common/JEllipse.class
+Image: ru/autogenmash/macros/cometmacros/common/images/oval.gif
+Description: ������
+
+Name: ru/autogenmash/macros/cometmacros/common/JRing.class
+Image: ru/autogenmash/macros/cometmacros/common/images/ring.gif
+Description: ������
+
+Name: ru/autogenmash/macros/cometmacros/common/JSector.class
+Image: ru/autogenmash/macros/cometmacros/common/images/sector.gif
+Description: ������
