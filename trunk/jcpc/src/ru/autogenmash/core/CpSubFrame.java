@@ -251,12 +251,12 @@ public class CpSubFrame implements Cloneable {
 		else if (mValue == 76 || mValue == 77)
 			result = String.valueOf(mValue + 20);
 		else if (mValue >= 91 && mValue <= 96) {
-		  if(mValue == 91) result = "80";//0x50-portal_on
-		  else if(mValue == 92) result = "82";//0x52-forward_on
-		  else if(mValue == 93) result = "84";//0x54-backward_on
-		  else if(mValue == 94) result = "81";//0x53-portal_off
-		  else if(mValue == 95) result = "83";//0x54-forward_off
-		  else if(mValue == 96) result = "85";//0x55-backward_off
+		  if(mValue == 91) result = "82";//0x52-forward_on 
+		  else if(mValue == 92) result = "84";//0x54-backward_on
+		  else if(mValue == 93) result = "80";//0x50-portal_on
+		  else if(mValue == 94) result = "83";//0x54-forward_off
+		  else if(mValue == 95) result = "85";//0x55-backward_off
+		  else if(mValue == 96) result = "81";//0x53-portal_off
 		}else{
 			if (mValue == 71 || mValue == 81)
 				result = "3";
