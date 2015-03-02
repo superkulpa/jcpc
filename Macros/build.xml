@@ -1,0 +1,49 @@
+<project name="Macros" default="compile" basedir=".">
+  
+  <target name="init">
+    <property name="src" value="src" />
+    <property name="build" value="build" />
+    <property name="classes" value="build" />
+  	<property name="deploy.src" value="../CNC/deploy" />
+  	<property name="kernel.lib" value="../JavaKernel/libs" />
+  	<property name="common" value="/ru/autogenmash/macros/cometmacros/common/images" />
+  	<property name="additional" value="/ru/autogenmash/macros/cometmacros/additional/images" />
+  	
+  	
+  	<path id = "class.path">
+	    <pathelement path="${classes}" />
+  		<pathelement path="${deploy.src}/JavaKernel.jar" />
+      <pathelement path="${kernel.lib}/jface/3.2/jface.jar" />
+	  </path>
+  </target>
+  
+	
+  <target name="clean" depends="init">
+    <deltree dir="${classes}" />
+  </target>
+	
+  <target name="prepare" depends="clean">
+    <mkdir dir="${classes}" />
+  </target>		
+  
+  <target name="compile" depends="prepare">
+    <javac srcdir="${src}" destdir="${classes}" encoding="UTF-8" source="1.3" target="1.1" debug="true">
+      <classpath refid="class.path"/>
+  	</javac>
+  	
+  	<mkdir dir="${build}${common}" />
+  	<copy todir="${build}${common}">
+  		 <fileset dir="${src}${common}"/>
+  	</copy>
+  	
+  	<mkdir dir="${build}${additional}" />
+    <copy todir="${build}${additional}">
+       <fileset dir="${src}${additional}"/>
+    </copy>
+  </target>
+	
+
+</project>
+
+
+

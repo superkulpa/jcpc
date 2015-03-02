@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/JavaKernel/libs/swt/win/3.2/swt.jar" sourcepath="D:/mtr/JavaKernel/libs/swt/qnx/src.zip"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/JavaKernel"/>
+	<classpathentry kind="lib" path="/JavaKernel/libs/jface/3.2/core.commands.jar"/>
+	<classpathentry kind="lib" path="/JavaKernel/libs/jface/3.2/core.runtime.jar"/>
+	<classpathentry kind="lib" path="/JavaKernel/libs/jface/3.2/equinox.common.jar"/>
+	<classpathentry kind="lib" path="/JavaKernel/libs/jface/3.2/jface.jar" sourcepath="/JavaKernel/libs/jface/3.2/src.zip"/>
+	<classpathentry kind="lib" path="/JavaKernel/libs/jface/3.2/jface.text.jar"/>
+	<classpathentry kind="lib" path="/JavaKernel/libs/jface/3.2/osgi.jar"/>
+	<classpathentry kind="output" path="build"/>
+</classpath>
