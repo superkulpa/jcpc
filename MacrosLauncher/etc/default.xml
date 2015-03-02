@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macros>
+  <parameters>
+    <parameter name="D" value="3250" />
+    <parameter name="A0" value="94200" />
+    <parameter name="A1" value="1050" />
+    <parameter name="A2" value="2000" />
+    <parameter name="N" value="2" />
+    <parameter name="d" value="600" />
+    <parameter name="Отверстие" value="Сквозное" />
+    <parameter name="Подача" value="100" />
+    <parameter name="Угол наклона" value="3" />
+    <parameter name="Эквидистанта" value="0" />
+    <parameter name="S" value="100" />
+  </parameters>
+</macros>
+

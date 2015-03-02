@@ -1,0 +1,4 @@
+"%JAVA_HOME%bin\jar.exe" cvf BaseClasses.jar -C ..\JavaKernel\build\ .\ru
+"%JAVA_HOME%bin\jar.exe" uvf BaseClasses.jar -C .\build\ .\ru
+"%JAVA_HOME%bin\jar.exe" cvfm BaseMacros.jar ..\Macros\manifest\common\MANIFEST.MF -C ..\Macros\build\ .\ru\autogenmash\macros\cometmacros\common
+"%JAVA_HOME%bin\jar.exe" cvfm AdditionalMacros.jar ..\Macros\manifest\additional\MANIFEST.MF -C ..\Macros\build\ .\ru\autogenmash\macros\cometmacros\additional

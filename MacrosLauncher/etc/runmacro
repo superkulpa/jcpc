@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cd /CNC/macros
+./launch.sh
+exit 0
+
+MACRO_NAME=JNHoledRectangle
+
+if [ ! -z $1 ]; then
+	MACRO_NAME=$1
+fi
+ 
+/usr/java/j9/bin/j9 -jit -classpath /CADM/jars/base.jar:/usr/java/SWT/swt.jar -nojit -Djava.library.path=/usr/java/SWT macros.${MACRO_NAME}
